@@ -1,0 +1,80 @@
+@import 'src/styles/base/mixins.scss';
+@import 'src/styles/base/colors.scss';
+@import 'src/styles/base/_fonts.scss';
+
+.product {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  @include card;
+
+  @include extra-large {
+    max-width: 260px;
+  }
+
+  &__wrapperImage {
+    height: 60px;
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 0.75rem;
+    border-top-right-radius: 0.75rem;
+    object-fit: fill;
+    object-position: top center;
+    transition: all 0.2s linear;
+  }
+
+  &__contentName {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem;
+  }
+
+  &__name {
+    flex: 4;
+    font-weight: bold;
+    font-size: $font-size-s;
+  }
+
+  &__price {
+    flex: 2;
+    text-align: end;
+  }
+
+  &__description {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+    font-size: $font-size-s;
+    margin: 0.5rem;
+  }
+
+  &__contentStock {
+    display: flex;
+    font-size: $font-size-s;
+    padding: 0.5rem;
+    align-items: end;
+    justify-content: center;
+
+    @include extra-small {
+      justify-content: space-between;
+    }
+  }
+
+  &__stock {
+    display: none;
+
+    @include extra-small {
+      display: inline;
+    }
+  }
+
+  &__button {
+    flex-shrink: 0;
+  }
+}

@@ -1,0 +1,41 @@
+@import 'src/styles/base/_fonts.scss';
+
+.item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+
+  &__wrapperImage {
+    height: 4rem;
+    width: 4rem;
+  }
+
+  &__image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    transition: all 0.2s linear;
+  }
+
+  &__contentName {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 6.8rem;
+  }
+
+  &__name {
+    display: flex;
+    flex-direction: column;
+    font-size: $font-size-xs;
+    margin-bottom: 0.5rem;
+  }
+
+  &__price {
+    width: 4rem;
+    display: inline-flex;
+    justify-content: end;
+  }
+}

@@ -1,0 +1,17 @@
+@import 'src/styles/base/colors';
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: solid 2px $gray-100;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+
+  &__logo {
+    font-size: 1.85rem;
+    line-height: 2.25rem;
+    font-weight: 600;
+    color: $blue-600;
+  }
+}

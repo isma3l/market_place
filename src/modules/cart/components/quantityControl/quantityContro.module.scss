@@ -1,0 +1,31 @@
+@import 'src/styles/base/colors.scss';
+@import 'src/styles/base/_fonts.scss';
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 95px;
+  height: 20px;
+  border-radius: 0.5rem;
+  border: solid 1px $blue-600;
+
+  &__control {
+    width: 1.7rem;
+    height: 1.25rem;
+    border: none;
+    background-color: white;
+    border-radius: 0.5rem;
+    font-size: $font-size-m;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  &__amount {
+    display: flex;
+    height: 1.25rem;
+    margin: 0 0.75rem;
+    align-items: center;
+  }
+}

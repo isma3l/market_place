@@ -1,0 +1,15 @@
+@import 'src/styles/base/colors.scss';
+
+.payment {
+  display: flex;
+  padding: 0.5rem;
+  background-color: $blue-100;
+  border-radius: 0.5rem;
+  justify-content: center;
+  width: 12.5rem;
+  margin: 2rem 1.8rem;
+
+  &__label {
+    margin: 0 0.5rem;
+  }
+}

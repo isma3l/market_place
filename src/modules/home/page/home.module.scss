@@ -1,0 +1,21 @@
+@import 'src/styles/base/mixins';
+
+.home {
+  display: flex;
+  justify-content: center;
+
+  &__containerCart {
+    margin: 2rem;
+    display: none;
+
+    @include small {
+      display: block;
+      margin: 2rem 0.5rem;
+    }
+
+    @include medium {
+      display: block;
+      margin: 2rem;
+    }
+  }
+}

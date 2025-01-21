@@ -1,0 +1,38 @@
+@import 'src/styles/base/mixins';
+
+.container {
+  width: 100%;
+
+  &__list {
+    display: grid;
+    gap: 16px;
+    padding: 0.5rem;
+    padding-bottom: 0;
+    grid-template-columns: repeat(auto-fill, minmax(31%, 1fr));
+
+    @include extra-small {
+      grid-template-columns: repeat(auto-fill, minmax(40%, 1fr));
+      padding: 2rem;
+    }
+
+    @include small {
+      grid-template-columns: repeat(auto-fill, minmax(45%, 1fr));
+      padding: 2rem 0.5rem;
+    }
+
+    @include medium {
+      grid-template-columns: repeat(auto-fill, minmax(35%, 1fr));
+      padding: 2rem;
+    }
+
+    @include large {
+      grid-template-columns: repeat(auto-fill, minmax(24%, 1fr));
+      padding: 2rem;
+    }
+
+    @include extra-large {
+      grid-template-columns: repeat(auto-fill, minmax(20%, 1fr));
+      padding: 2rem;
+    }
+  }
+}

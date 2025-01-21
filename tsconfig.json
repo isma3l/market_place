@@ -1,0 +1,50 @@
+{
+  "compilerOptions": {
+    "noEmit": true,
+    "outDir": "dist",
+
+    // Type Checking Configuration
+    "skipLibCheck": true,
+    "allowUnreachableCode": false,
+    "allowSyntheticDefaultImports": true,
+    "allowUnusedLabels": false,
+    "forceConsistentCasingInFileNames": true,
+    "exactOptionalPropertyTypes": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitThis": true,
+    "noPropertyAccessFromIndexSignature": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitOverride": true,
+    "noImplicitAny": true,
+    "noImplicitReturns": true,
+    "alwaysStrict": true,
+    "strict": true,
+    "strictBindCallApply": true,
+    "strictFunctionTypes": true,
+    "strictNullChecks": true,
+    "strictPropertyInitialization": true,
+    "useUnknownInCatchVariables": true,
+
+    // Modules Configuration
+    "module": "ES2020",
+    "moduleResolution": "node",
+    "baseUrl": "./",
+
+    // Language and Environment Configuration
+    "jsx": "react-jsx",
+    "target": "es2020",
+
+    // Interop Constraints Configuration
+    "esModuleInterop": true,
+    "isolatedModules": true,
+
+    "types": ["node", "jsdom", "@testing-library/jest-dom"],
+
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  },
+  "include": ["src/**/*.ts", "src/**/*.tsx", "declaration.d.ts"],
+  "exclude": ["node_modules", "coverage", "webpack.*.js", "dist", "./__jest__/*"]
+}

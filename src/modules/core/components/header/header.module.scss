@@ -1,0 +1,33 @@
+@import 'src/styles/base/mixins';
+@import 'src/styles/base/colors';
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+  background-color: $blue-600;
+  padding: 0 1rem;
+
+  @include small {
+    justify-content: end;
+  }
+
+  &__link {
+    height: 35px;
+    display: inline-flex;
+    align-items: center;
+    background-color: $blue-600;
+    border: none;
+  }
+
+  &__hide {
+    @include small {
+      display: none;
+    }
+  }
+
+  &__icon {
+    height: 100%;
+  }
+}

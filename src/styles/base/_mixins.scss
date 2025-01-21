@@ -1,0 +1,38 @@
+@mixin card {
+  border-radius: 0.75rem;
+  border-width: 1px;
+  border-color: #f3f4f6;
+  box-shadow:
+    0 4px 7px 0 rgba(0, 0, 0, 0.1),
+    0 6px 20px 0 rgba(0, 0, 0, 0.1);
+}
+
+@mixin extra-small {
+  @media only screen and (min-width: 440px) {
+    @content;
+  }
+}
+
+@mixin small {
+  @media only screen and (min-width: 640px) {
+    @content;
+  }
+}
+
+@mixin medium {
+  @media only screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin large {
+  @media only screen and (min-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin extra-large {
+  @media only screen and (min-width: 1280px) {
+    @content;
+  }
+}
