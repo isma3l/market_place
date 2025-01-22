@@ -27,11 +27,14 @@ En total se cuenta con 3 modulos:
 **src/modules/core**
 Aquí se ubican los modelos, componentes comunes, gestor de rutas y del estado de la app
 
-**src/modules/podcasts**
-Contiene todos los assets necesarios para mostrar el listado de podcasts
+**src/modules/home**
+Contiene todos los assets necesarios para mostrar el listado de productos
 
-**src/modules/details**
-Contiene todos los assets necesarios para mostrar el detalles de un podcast y de sus episodios
+**src/modules/favorites**
+Contiene todos los assets necesarios para mostrar el listado de productos favoritos
+
+**src/modules/cart**
+Contiene todos los assets necesarios para mostrar el carrito de compras
 
 Los estilos base de la app y los mixins se encuentran en la carpeta **src/styles** fuera de la carpeta **src/modules**
 
@@ -48,25 +51,11 @@ Antes de ejecutar la aplicación es necesario seguir estos pasos iniciales:
 
 #### Ejecución en modo development
 
-Para ejecutar la aplicación en modo desarrollo es necesario contar con el archivo **.env** donde se guardan las URLs del servidor CORs y de itunes apple
+Primero: Abrir una terminal y entrar a la carpeta /server-api, una vez dentro hay que ejecutar el comando `npm run start` para levantar el servidor que provee los productos
 
+Segundo:
 Ejecutar el comando `npm run start` para levantar el servidor de desarrollo de webpack.
-
 Una vez que el servidor este ejecutándose, automáticamente se abrirá una ventana en el navegador y se cargará la aplicación en la dirección http://localhost:8080/
-
-#### Ejecución en modo production
-
-Hay que seguir dos pasos:
-
-- Ejecutar el comando `npm run build`  
-  Como resultado se crearán los bundles optimizados y se guardaran en una nueva carpeta llamada **dist**
-
-- Desplegar la carpeta **dist** en un servidor local, ejecutando estos comandos:  
-   `npm install -g serve`  
-  `serve dist`  
-  Esto ejecutará la app de producción en la dirección http://localhost:3000
-
-  Sólo queda abrir una ventana en chrome y probar la app en esa dirección.
 
 #### Ejecución las pruebas
 
