@@ -1,3 +1,4 @@
+import { ProductInterface } from '@/modules/core/models';
 import { updateProduct } from '@/modules/core/services';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 
@@ -6,8 +7,10 @@ export const useUpdateFavorite = () => {
 
   const mutation = useMutation({
     mutationFn: updateProduct,
-    onSuccess: () => {
-      queryClient.invalidateQueries({ queryKey: ['favorites'] });
+    onSuccess: (data: ProductInterface) => {
+      queryClient.setQueryData(['favorites'], (oldData: ProductInterface[]) => {
+        return oldData.filter((product) => product.id !== data.id);
+      });
     },
   });
 

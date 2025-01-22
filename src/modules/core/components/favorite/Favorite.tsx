@@ -14,7 +14,7 @@ export const Favorite = ({ isFavorite, addFavorite, removeFavorite }: Props) => 
       <img
         src={isFavorite ? favorite : nofavorite}
         className={styles.content__image}
-        alt='favorite image'
+        alt={isFavorite ? 'favorite image' : 'no favorite image'}
         onClick={() => (isFavorite ? removeFavorite() : addFavorite())}
       />
     </figure>

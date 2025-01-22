@@ -19,7 +19,7 @@ export const Header = () => {
           <img src={goBack} className={styles.content__icon} alt='go back' />
         </button>
         <Link to={Paths.base} className={styles.content__home}>
-          <span>Home</span>
+          <span>Productos</span>
         </Link>
       </div>
 

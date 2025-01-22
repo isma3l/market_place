@@ -1,4 +1,7 @@
-import '@testing-library/jest-dom'
-import fetchMock from 'jest-fetch-mock'
+import '@testing-library/jest-dom';
+import { TextEncoder } from 'util';
+import fetchMock from 'jest-fetch-mock';
 
-fetchMock.enableMocks()
+global.TextEncoder = TextEncoder;
+
+fetchMock.enableMocks();
