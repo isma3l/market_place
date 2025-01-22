@@ -9,16 +9,16 @@
   background-color: $blue-600;
   padding: 0 1rem;
 
-  @include small {
-    justify-content: end;
-  }
-
   &__link {
     height: 35px;
     display: inline-flex;
     align-items: center;
     background-color: $blue-600;
     border: none;
+
+    &:hover {
+      cursor: pointer;
+    }
   }
 
   &__hide {
@@ -33,5 +33,15 @@
 
   &__icon {
     height: 100%;
+  }
+
+  &__home {
+    display: none;
+    font-weight: bold;
+    color: black;
+
+    @include small {
+      display: block;
+    }
   }
 }

@@ -1,5 +1,5 @@
 import Cart from '@/modules/cart';
-import { ProductList } from './components/productList/ProducList';
+import { ProductList } from '../components/productList/ProducList';
 import * as styles from './home.module.scss';
 
 export const Home = () => {
