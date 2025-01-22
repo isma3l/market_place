@@ -27,6 +27,10 @@
     }
   }
 
+  &__noVisible {
+    visibility: hidden;
+  }
+
   &__icon {
     height: 100%;
   }

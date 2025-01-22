@@ -3,7 +3,8 @@ import { LIMIT_PAGE, URL } from '../constants';
 
 type ParamsUpdate = {
   id: string;
-  stock: number;
+  stock?: number;
+  favorite?: number;
 };
 
 export const fetchProducts = async ({
@@ -15,13 +16,23 @@ export const fetchProducts = async ({
   return res.json();
 };
 
-export const updateProductStock = async ({ id, stock }: ParamsUpdate) => {
+export const updateProduct = async ({ id, stock, favorite }: ParamsUpdate) => {
+  const body = {
+    ...(stock !== undefined && { stock }),
+    ...(favorite !== undefined && { favorite }),
+  };
+
   const res = await fetch(`${URL}/${id}`, {
     method: 'PATCH',
     headers: {
       'Content-Type': 'application/json',
     },
-    body: JSON.stringify({ stock }),
+    body: JSON.stringify(body),
   });
   return await res.json();
+};
+
+export const fetchFavorites = async (): Promise<ProductInterface[]> => {
+  const res = await fetch(`${URL}?favorite=1`);
+  return res.json();
 };

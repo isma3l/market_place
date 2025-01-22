@@ -1,7 +1,7 @@
 import { formatPrice } from '@/modules/core/utils';
 import { QuantityControl } from '../quantityControl/QuantityControl';
 import * as styles from './itemCart.module.scss';
-import { CartItemInterface, ProductInterface } from '@/modules/core/models';
+import { CartItemInterface } from '@/modules/core/models';
 
 type Props = {
   item: CartItemInterface;

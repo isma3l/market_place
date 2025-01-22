@@ -5,5 +5,5 @@ export interface ProductInterface {
   productName: string;
   price: number;
   productDescription: string;
-  favorite: number;
+  favorite: number | string;
 }

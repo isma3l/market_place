@@ -2,8 +2,8 @@ import { useInfiniteQuery } from '@tanstack/react-query';
 import { LIMIT_PAGE } from '@/modules/core/constants';
 import { fetchProducts } from '@/modules/core/services';
 
-export const useProducts = () => {
-  const { data, fetchNextPage, isFetchingNextPage, status } = useInfiniteQuery({
+export const useFetchProducts = () => {
+  const { data, fetchNextPage, isFetchingNextPage } = useInfiniteQuery({
     queryKey: ['products'],
     queryFn: fetchProducts,
     initialPageParam: 0,
@@ -14,6 +14,5 @@ export const useProducts = () => {
     products: data?.pages.flat() ?? [],
     fetchProducts: () => !isFetchingNextPage && fetchNextPage(),
     isFetchingNextPage,
-    status,
   };
 };
